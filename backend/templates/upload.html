@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Película</title>
+    <link rel="stylesheet" href="../static/upload.css">
+</head>
+<body>
+    <h1>Subir Movie</h1>
+    <a href="/dashboard">Ir al Dashboard</a>
+    <form id="movie-form">
+        <input type="text" id="movie-name" placeholder="Nombre de Película" required>
+        <button type="button" id="fetch-tmdb">Buscar en TMDB</button>
+        <div id="search-results" style="display:none;">
+            <h3>Resultados de búsqueda:</h3>
+            <ul id="result-list"></ul>
+        </div>
+        <input type="text" id="poster-url" placeholder="URL de Portada">
+        <img id="poster-preview" alt="Vista previa de portada" style="display:none;">
+        <input type="number" id="year" placeholder="Año">
+        <input type="number" step="0.1" id="rating" placeholder="Ratio">
+        <textarea id="synopsis" placeholder="Sinopsis"></textarea>
+        <input type="text" id="genres" placeholder="Géneros (separados por comas)">
+        <input type="text" id="play-url" placeholder="Play URL">
+        <button type="submit">Guardar Película</button>
+    </form>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>

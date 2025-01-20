@@ -1,0 +1,138 @@
+/* Fondo y contenedor principal */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilo de las tarjetas */
+.movie-card {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 950px;
+    transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+/* Portada */
+.movie-poster img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.movie-poster p {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+}
+
+/* Información */
+.movie-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.movie-info h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.movie-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.play-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #0056b3;
+}
+
+.movie-info p strong {
+    color: #444;
+    font-weight: bold;
+}
+
+.movie-info p span {
+    font-size: 18px;
+    color: #ffbf00;
+    vertical-align: middle;
+}
+
+
+
+/* Barra de Búsqueda */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #007BFF;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Sin resultados */
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    margin-top: 20px;
+}

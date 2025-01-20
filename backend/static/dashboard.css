@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* Title */
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Link Style */
+a {
+    display: inline-block;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #3498db;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #34495e;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover effects for rows */
+tbody tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Button Styles */
+button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+/* Image */
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer / Responsive Design */
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    a {
+        padding: 8px 16px;
+    }
+
+    button {
+        padding: 6px 12px;
+    }
+}

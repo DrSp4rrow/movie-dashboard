@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/dashboard.css">
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <a href="/upload">Subir Película</a>
+    <p>Total de películas: {{ movies|length }}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Portada</th>
+                <th>Nombre de Película</th>
+                <th>Año</th>
+                <th>Ratio</th>
+                <th>Géneros</th>
+                <th>Play URL</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+            <tr>
+                <!-- Portada -->
+                <td>
+                    {% if movie[2] %}
+                    <img src="{{ movie[2] }}" alt="Portada" style="width: 100px; height: auto;">
+                    {% else %}
+                    Sin portada
+                    {% endif %}
+                </td>
+                <!-- Nombre de la película -->
+                <td>{{ movie[1] }}</td>
+                <!-- Año -->
+                <td>{{ movie[3] }}</td>
+                <!-- Ratio -->
+                <td>{{ movie[4] }}</td>
+                <!-- Géneros -->
+                <td>{{ movie[6] }}</td>
+                <!-- Play URL -->
+                <td>
+                    {% if movie[7] %}
+                    <a href="{{ movie[7] }}" target="_blank">Ver</a>
+                    {% else %}
+                    No disponible
+                    {% endif %}
+                </td>
+                <!-- Acciones -->
+                <td>
+                    <button onclick="deleteMovie({{ movie[0] }})">Eliminar</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        function deleteMovie(id) {
+            fetch(`/api/delete_movie/${id}`, { method: 'DELETE' })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    window.location.reload();
+                });
+        }
+    </script>
+</body>
+</html>

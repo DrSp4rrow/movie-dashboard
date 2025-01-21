@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 import psycopg2  # Cambiar sqlite3 por psycopg2
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -145,4 +146,4 @@ def delete_movie(id):
     return jsonify({'message': 'Movie deleted successfully'}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)

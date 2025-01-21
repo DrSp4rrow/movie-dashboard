@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 
 # Configuración de la base de datos PostgreSQL
-DB_HOST = 'dpg-cu7dvstsvqrc739830ng-a.postgres.render.com'  # Cambia con tu host de PostgreSQL en Render
+DB_HOST = 'dpg-cu7dvstsvqrc739830ng-a'  # Cambia con tu host de PostgreSQL en Render
 DB_PORT = '5432'  # Puerto predeterminado de PostgreSQL
 DB_NAME = 'database_y7oe'  # Nombre de tu base de datos
 DB_USER = 'sp4rrow'  # Usuario de tu base de datos
